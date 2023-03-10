@@ -108,3 +108,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+#---------------------INSTRUCCIONES----------------------- 
+ #explique:  
+ #      1. ¿Qué es lo que hace el código en un comentario antes de modificarlo? 
+#      R.- lo mismo que el primer programa #      2. ¿Cuál es la sintaxis de un while? 
+#       R.-
+ #      3. ¿Exite swhitch en python? 
+#       
+ #      4. ¿Qué es un elif? 
+ #      5. ¿Qué función de se ejecuta al correr el script?
