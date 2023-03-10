@@ -1,15 +1,8 @@
-
 /* Laboratorio4
-Author: Curso Programación 2023 
-date: 7-03-2023
-Description: Laboratorio para repasar condiciones, funciones e investigar "while" en C
+Author: Daniel Iram Gonzalez Portilla
+date: 09-03-2023
+Description: El programa es una calculadora con las operaciones de suma, resta multiplicacion y division implementando while y switch así como el uso de funciones
 */
-
-//---------------------INSTRUCCIONES-----------------------
-//Cree una funcion "suma" que imprima la suma de dos valores solo si son pares, de lo conrario imprimirá que no son pares
-//Cree una funcion "resta" que imprima la resta de dos valores solo si son múltiplos de 5, de lo conrario imprimirá que no son impares
-//Cree una funcion "division" que imprima la división de dos valores solo si el resultado no tiene reciduo, de lo conrario imprimirá que no es una división exacta
-//Cree una funcion "multiplicacion" que imprima la multiplicación de dos valores solo si son mayores a 10, de lo conrario imprimirá que no son mayores a 10
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,14 +82,24 @@ int main(){
                 printf("\nNo valido");
                 break;
         }
-        printf("\nOprima enter tecla cualquiera para continuar ");
+        printf("\nOprima enter o cualquier tecla cualquiera para continuar, si desea salir, oprima 5 \n");
         fflush( stdin );
         scanf("%c",&inutil);
+        if(inutil==53)
+        	flag=5;
+        else
+        	flag=0;
     }
     printf("excelente");
 }
 void suma (int a, int b)
 {
+	/* suma
+	 Author: Daniel Iram Gonzalez Portilla
+	 Date: 09/03/2023
+	 Description: funcion "suma" que imprime la suma de dos valores solo si son pares, de lo conrario imprimirá que no son pares
+	 [Param: [a] [int] [b] [int] ]
+	*/
 	if ((a%2==0)&&(b%2==0))
 	{
 		int tot;
@@ -107,6 +110,12 @@ void suma (int a, int b)
 }
 void resta (int a, int b)
 {
+	/* resta
+	 Author: Daniel Iram Gonzalez Portilla
+	 Date: 09/03/2023
+	 Description: funcion "resta" que imprime la resta de dos valores solo si son múltiplos de 5, de lo conrario imprimirá que no son impares
+	 [Param: [a] [int] [b] [int] ]
+	*/
 	if((a%5==0)&&(b%5==0))
 	{
 		int tot;
@@ -117,6 +126,12 @@ void resta (int a, int b)
 }
 void division(int a, int b)
 {
+	/* division
+	 Author: Daniel Iram Gonzalez Portilla
+	 Date: 09/03/2023
+	 Description: funcion "division" que imprima la división de dos valores solo si el resultado no tiene reciduo, de lo conrario imprimirá que no es una división exacta
+	 [Param: [a] [int] [b] [int] ]
+	*/
 	int tot;
 	tot=a/b;
 	if(a%b==0)
@@ -130,6 +145,12 @@ void multiplicacion(int a, int b)
 {
 	if((a>10)&&(b>10))
 	{
+		/* division
+		 Author: Daniel Iram Gonzalez Portilla
+		 Date: 09/03/2023
+		 Description: funcion "multiplicacion" que imprima la multiplicación de dos valores solo si son mayores a 10, de lo conrario imprimirá que no son mayores a 10
+		 [Param: [a] [int] [b] [int] ]
+		*/
 		int tot;
 		tot=a*b;
 		printf("\nEl producto de %d por %d es: %d",a,b,tot); 
