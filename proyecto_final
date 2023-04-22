@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <malloc.h> 
+struct Nodo
+{
+  int id;
+  char nombreActividad[30]; 
+  char descripcionActividad[30]; 
+  int prioridad;
+  int estadoAvtividad;
+  char categoria[];
+  char nota[30];
+  struct Nodo *izq;
+  struct Nodo *der;
+};
+struct ArbolBinario
+{
+  struct Nodo *raiz;
+}; 
+/*
+void inicializa_arbol(struct ArbolBinario *arbol);
+struct Nodo *crea_nodo(char *Nombre,int Edad,float Sueldo);
+void recorre_orden(struct Nodo *nodo);
+void agrega_nodo(struct ArbolBinario *arbol,char *nombre,char *apellido_paterno,float sueldo, char *Valor);
+struct Nodo *busca_nodo(struct ArbolBinario *arbol,int valor);
+*/
+void inicializa_arbol(struct ArbolBinario *arbol)
+{
+  arbol->raiz = NULL;
+}
+
