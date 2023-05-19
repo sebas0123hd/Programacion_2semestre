@@ -28,13 +28,19 @@ void inicializa_arbol(struct ArbolBinario *arbol)
   arbol->raiz = NULL;
 }
 
+// En esta funcion recorre un árbol binario de busqueda que muestra la informacion almacenada en cada nodo//
 void recorre_orden(struct Nodo *nodo)
 {
+// verifica si el nodo actual tiene un hijo izquierdo no nulo//
   if (nodo->izq != NULL) 
-  recorre_orden(nodo->izq);
+  //Si se cumple la condicion, se llama recursivamente a la función recorre_orden pasando como argumento el hijo izquierdo del nodo actual//
+  //Cuando se recorre el subarbol izquierdo, muestra la información almacenada en el nodo actual utilizando la función printf. La información es el nombre de la tarea, si la tarea ha sido realizada, y la prioridad de la tarea//
   printf("*************\nNombre:%s\t tareaRealizada:%i\t prioridadTarea:%i\n",nodo->nombreTarea,nodo->tareaRealizada,nodo->prioridadTarea);
+  //Ahora se verificara si el nodo actual tiene un hijo derecho no nulo. Si es asi, llama recursivamente a la función recorre_orden pasando como argumento el hijo derecho del nodo actual//
   if (nodo->der != NULL) 
+  //Por lo que se recorre el subarbol derecho despues de mostrar la informacion del nodo actual.//
   recorre_orden(nodo->der);
+  //Ayuda ha pausar la ejecucion y esperar a que el usuario presione una tecla antes de continuar. Ayuda a que el usuario vea la informacion mostrada antes de que la consola se cierre automáticamente//
   system("pause");
 }
 
