@@ -1,3 +1,6 @@
+//@date <19-05-2023>//
+//@author <Becerra Jimenez Victor, Cortes Sanchez Edgar Noe, Gonzalez Portilla Daniel Iram, Ramos Espinoza Martin Sebastian>//
+//@version  <1.5>//
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,6 +19,8 @@ struct ArbolBinario
 {
   struct Nodo *raiz;
 }; 
+
+
 /*
 void inicializa_arbol(struct ArbolBinario *arbol);
 struct Nodo *crea_nodo(char *nombreTarea,int tareaRealizada,float prioridadTarea);
@@ -23,11 +28,17 @@ void recorre_orden(struct Nodo *nodo);
 void agrega_nodo(struct ArbolBinario *arbol,char *nombre,char *apellido_paterno,float sueldo, char *Valor);
 struct Nodo *busca_nodo(struct ArbolBinario *arbol,int valor);
 */
+//@name <inicializa_arbol>//
 void inicializa_arbol(struct ArbolBinario *arbol)
 {
   arbol->raiz = NULL;
 }
 
+//@name <recorre_orden>//
+//@param <tareaRealizada> <bool>//
+//@param <prioridadTarea> <int>//
+//@param <nombreTarea> <char>//
+//@return <char, bool, int, nodo>// 
 void recorre_orden(struct Nodo *nodo)
 {
   if (nodo->izq != NULL) 
@@ -61,6 +72,11 @@ struct Nodo *busca_nodo(struct ArbolBinario *arbol,char *valor)
     return NULL;
 }
 
+//@name <crea_nodo>//
+//@param <tareaRealizada> <bool>//
+//@param <prioridadTarea> <int>//
+//@param <nombreTarea> <char>//
+//@return <char, bool, int, nodo>// 
 struct Nodo *crea_nodo(char *nombreTarea,bool tareaRealizada,int prioridadTarea)
 {
   struct Nodo *p = (struct Nodo *)malloc(sizeof(struct Nodo));
@@ -73,6 +89,13 @@ struct Nodo *crea_nodo(char *nombreTarea,bool tareaRealizada,int prioridadTarea)
   p->der = NULL;
   return p;
 }
+
+//@name <agrega_nodo>//
+//@param <tareaRealizada> <bool>//
+//@param <prioridadTarea> <int>//
+//@param <nombreTarea> <char>//
+//@param <ArbolBinario *arbol> <struct>//
+//@return <char, bool, int, nodo, struct>// 
 
 void agrega_nodo(struct ArbolBinario *arbol,char *nombreTarea,bool tareaRealizada,int prioridadTarea)
 {
@@ -106,6 +129,11 @@ void agrega_nodo(struct ArbolBinario *arbol,char *nombreTarea,bool tareaRealizad
     else
       arbol->raiz = crea_nodo(nombreTarea,tareaRealizada,prioridadTarea);
 }
+
+//@name <elimina_nodo>//
+//@param <valor> <char>//
+//@param <ArbolBinario *arbol> <struct>//
+//@return <char, nodo, struct>// 
 
 int elimina_nodo(struct ArbolBinario *arbol,char *valor)
 {
