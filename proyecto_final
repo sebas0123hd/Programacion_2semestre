@@ -231,7 +231,7 @@ int main ()
       scanf("%i",&prioridadTarea);
     //  strcat(p->valor,nombre);
       agrega_nodo(&arbol,nombreTarea,tareaRealizada,prioridadTarea);
-      printf("Los datos del empleado fueron guardados exitosamente!\n");
+      printf("La tarea fue guardada exitosamente!\n");
       system("pause");
 
     break;
@@ -241,16 +241,16 @@ int main ()
 	  struct Nodo *Auxi = (struct Nodo *)malloc(sizeof(struct Nodo));
 	  fflush(stdin);
       system("cls");
-      printf("Por favor, introduzca el nombre del empleado a buscar:\n");
+      printf("Por favor, introduzca el nombre de la tarea que desea:\n");
       fflush(stdin);
       gets(nombreTarea);
       fflush(stdin);
       Auxi=busca_nodo(&arbol,nombreTarea);
       if(Auxi!=NULL){
-      printf("Los datos del empleado son: prioridadTarea: %i. tareaRealizada: %i. nombreTarea: %s.",Auxi->prioridadTarea,Auxi->tareaRealizada,Auxi->nombreTarea);
+      printf("La informacion de la tarea buscada es: prioridadTarea: %i. tareaRealizada: %i. nombreTarea: %s.",Auxi->prioridadTarea,Auxi->tareaRealizada,Auxi->nombreTarea);
       system("pause");
       }else{
-      printf("El dato que busca no se encuentra en la lista...");
+      printf("La tarea que busca no se encuentra en la lista...");
       system("pause");
     }
 	break;
